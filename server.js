@@ -9,7 +9,10 @@ const app = express();
 
 
 
-app.use(cors());
+app.use(cors({
+  origin: "https://capstone-frontend-nine.vercel.app",
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 const middleware = require('./routes/pro')
